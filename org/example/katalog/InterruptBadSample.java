@@ -1,6 +1,9 @@
 package org.example.katalog;
 
 class HelloPrinter extends Thread {
+  // スレッドを止めるべきかのフラグ。
+  // volatileはあるスレッドで代入した値が他のスレッドでも
+  // 同じものが見えることを保証するおまじない
   volatile boolean stop = false;
 
   @Override
